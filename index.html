@@ -203,6 +203,7 @@
       color: var(--muted);
       margin-bottom: 1.5rem;
       max-width: 70ch;
+      text-align: left;
     }
 
     .about-grid,
@@ -558,19 +559,20 @@
             </div>
             <div class="project-content">
               <div class="project-copy">
-                <h3>P.U.L.S.E. BVM Monitoring System</h3>
+                <h3>Pulmonary Unit for Live Sensing &amp; Evaluation (P.U.L.S.E.)</h3>
                 <p>
                   Designed an attachment for a bag valve mask that integrates sensing and embedded processing to monitor respiratory parameters.
-                  The system improves visibility into ventilation performance through continuous feedback, embedded data acquisition, and hardware-supported display interfaces.
+                  I also created a companion application to visualize live sensor data, present key ventilation metrics, and make the system easier to monitor through a clear user-facing interface.
+                  Together, the hardware and application improve visibility into ventilation performance through continuous feedback, embedded data acquisition, and accessible display interfaces.
                 </p>
                 <div class="skills">
                   <span class="chip">Embedded Firmware</span>
                   <span class="chip">Pressure Sensing</span>
                   <span class="chip">BLE / Wireless</span>
-                  <span class="chip">UI Dashboard</span>
+                  <span class="chip">UI/UX Dashboard</span>
                 </div>
                 <div class="project-links">
-                  <a href="https://github.com/maesparza26/flo2-patient-monitor.git" target="_blank" rel="noreferrer">GitHub</a>
+                  <a href="https://maesparza26.github.io/flo2-patient-monitor/" target="_blank" rel="noreferrer">Website</a>
                   <a href="pulse-circuit-schematic.png" target="_blank" rel="noreferrer">Circuit Schematic</a>
                   <a href="pulse-pcb.png" target="_blank" rel="noreferrer">PCB</a>
                 </div>
@@ -592,17 +594,16 @@
               <div class="project-copy">
                 <h3>PID Ball Balancing Platform</h3>
                 <p>
-                  Designed and implemented a ball balancing control system using PID control principles, with system performance validated through testing and documented in a recorded demonstration.
-                  The project highlights modeling, implementation, and measured performance in a working prototype.
+                  Developed a real-time ball balancing platform that combines resistive touchscreen position sensing, PID-based closed-loop control, and servo-driven actuation to keep a ball centered on the surface.
+                  The project involved system modeling, controller tuning, and prototype validation on a Raspberry Pi-based testbed, demonstrating stable feedback control in a dynamic system.
                 </p>
                 <div class="skills">
-                  <span class="chip">MATLAB</span>
-                  <span class="chip">Simulink</span>
-                  <span class="chip">System Modeling</span>
-                  <span class="chip">Experimental Validation</span>
+                  <span class="chip">Closed-Loop Control</span>
+                  <span class="chip">Raspberry Pi</span>
+                  <span class="chip">3D Printing</span>
+                  <span class="chip">Servo Actuation</span>
                 </div>
                 <div class="project-links">
-                  <a href="#">GitHub</a>
                   <a href="https://youtu.be/KXk1OGpyCFk" target="_blank" rel="noreferrer">Video Demo</a>
                 </div>
               </div>
@@ -612,48 +613,23 @@
 
           <article class="card project-card">
             <div class="project-top">
-              <span class="project-tag">Embedded / Microcontroller</span>
-            </div>
-            <h3>LED Reaction Game with UART Scoring</h3>
-            <p>
-              Programmed a microcontroller-based game where users respond to LED prompts with button inputs.
-              Converted reaction timing into points and transmitted results over UART for mobile app interaction.
-            </p>
-            <div class="skills">
-              <span class="chip">STM32</span>
-              <span class="chip">Assembly / Embedded Logic</span>
-              <span class="chip">UART</span>
-              <span class="chip">Human Interaction</span>
-            </div>
-            <div class="project-links">
-              <a href="#">GitHub</a>
-              <a href="#">Demo</a>
-            </div>
-          </article>
-
-          <article class="card project-card">
-            <div class="project-top">
               <span class="project-tag">Automation / Robotics</span>
             </div>
             <div class="project-content">
               <div class="project-copy">
-                <h3>Stack Sort Robot</h3>
+                <h3>Automated Stack Sorting Robot</h3>
                 <p>
-                  Designed and assembled a robotic sorting system that combines mechanical structure, actuation, and embedded control to organize stacked components.
-                  The project emphasizes integrated mechatronic design, subsystem coordination, and functional prototyping.
+                  Designed and assembled an autonomous stack sorting robot that uses computer vision to identify colored blocks, align with the target, and transport each block to a designated stacking location.
+                  The system integrates a Raspberry Pi, custom 3D-printed elevator and claw mechanisms, and stepper and servo motor control to coordinate sensing, gripping, lifting, and placement in a complete workflow.
                 </p>
                 <div class="skills">
-                  <span class="chip">Mechanical Design</span>
-                  <span class="chip">Embedded Control</span>
-                  <span class="chip">Actuation</span>
-                  <span class="chip">Prototyping</span>
-                </div>
-                <div class="project-links">
-                  <a href="#">GitHub</a>
-                  <a href="#">Project Details</a>
+                  <span class="chip">Computer Vision</span>
+                  <span class="chip">Raspberry Pi</span>
+                  <span class="chip">Stepper &amp; Servo Control</span>
+                  <span class="chip">3D Printing</span>
                 </div>
               </div>
-              <img class="project-image" src="stack-sort-robot.png" alt="CAD rendering of the Stack Sort Robot project" />
+              <img class="project-image" src="stack-sort-robot.png" alt="CAD rendering of the Automated Stack Sorting Robot project" />
             </div>
           </article>
 
@@ -667,7 +643,7 @@
                 <p>
                   Developed a hanging crane system with pendulum dynamics to study motion behavior, load swing response, and control considerations in an underactuated mechanical system.
                   The project also explores double pendulum behavior, where small differences in initial conditions can produce highly unpredictable and chaotic motion.
-                  This work highlights dynamic modeling, system analysis, and the challenges of understanding and controlling complex nonlinear systems in mechatronic design.
+                  This work highlights dynamic modeling, system analysis, and the challenges of understanding and controlling complex nonlinear systems in system design.
                 </p>
                 <div class="skills">
                   <span class="chip">Dynamic Modeling</span>
@@ -683,6 +659,24 @@
               <img class="project-image project-image-contain" src="crane-two-pendulum.png" alt="CAD model of a crane with two pendulums" />
             </div>
           </article>
+
+          <article class="card project-card">
+            <div class="project-top">
+              <span class="project-tag">Embedded / Microcontroller</span>
+            </div>
+            <h3>LED Reaction Game with UART Scoring</h3>
+            <p>
+              Programmed a microcontroller-based game where users respond to LED prompts with button inputs.
+              Reaction timing was converted into points and transmitted results over UART for mobile app interaction.
+              The project involved coordinating timing logic, user input handling, and serial communication to create a responsive embedded game with real-time scoring feedback.
+            </p>
+            <div class="skills">
+              <span class="chip">STM32</span>
+              <span class="chip">Assembly / Embedded Logic</span>
+              <span class="chip">UART</span>
+              <span class="chip">Human Interaction</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -696,31 +690,70 @@
 
         <div class="about-grid">
           <div class="card">
-            <h3>Technical Skills</h3>
-            <div class="skills">
-              <span class="chip">Arduino</span>
-              <span class="chip">C / C++</span>
-              <span class="chip">MATLAB</span>
-              <span class="chip">Simulink</span>
-              <span class="chip">SolidWorks</span>
-              <span class="chip">BLE</span>
-              <span class="chip">Sensors</span>
-              <span class="chip">OLED / LCD Displays</span>
-              <span class="chip">Data Acquisition</span>
-              <span class="chip">Prototyping</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>Quick Resume Section</h3>
+            <h3>Background</h3>
             <ul class="resume-list">
               <li><strong>Education:</strong> B.S. in Multidisciplinary Engineering Technology - Mechatronics</li>
-              <li><strong>Interests:</strong> Embedded systems, controls, hardware design, medical technology</li>
-              <li><strong>Experience:</strong> Firmware development, sensor integration, CAD design, testing and validation</li>
+              <li><strong>Interests:</strong> Embedded Systems, Automation & Controls, Medical Technology</li>
+              <li><strong>Experience:</strong> Firmware Development, Sensor Integration, CAD design, Testing and Validation</li>
             </ul>
             <div class="hero-actions" style="margin-top:1.2rem;">
               <a class="btn btn-secondary" href="MEsparza_Resume.pdf" target="_blank" rel="noreferrer">Download Resume PDF</a>
             </div>
+          </div>
+
+          <div class="card">
+            <h3>Technical Skills</h3>
+            <div class="skills">
+              <span class="chip">Arduino</span>
+              <span class="chip">Raspberry Pi</span>
+              <span class="chip">STM32</span>
+              <span class="chip">C / C++</span>
+              <span class="chip">Assembly</span>
+              <span class="chip">Kotlin</span>
+              <span class="chip">Linux</span>
+              <span class="chip">Python</span>
+              <span class="chip">React / Next.js</span>
+              <span class="chip">ROS (RViz, MoveIt2)</span>
+              <span class="chip">UR Cobot Programming</span>
+              <span class="chip">MATLAB</span>
+              <span class="chip">Simulink</span>
+              <span class="chip">SolidWorks</span>
+              <span class="chip">Autodesk Fusion 360</span>
+              <span class="chip">Onshape</span>
+              <span class="chip">Embedded Firmware</span>
+              <span class="chip">SPI</span>
+              <span class="chip">I2C</span>
+              <span class="chip">UART</span>
+              <span class="chip">PCB Design</span>
+              <span class="chip">KiCad</span>
+              <span class="chip">Multisim</span>
+              <span class="chip">Quartus</span>
+              <span class="chip">Data Acquisition</span>
+              <span class="chip">LiDAR</span>
+              <span class="chip">Node-RED</span>
+              <span class="chip">Oscilloscope</span>
+              <span class="chip">Multimeter</span>
+              <span class="chip">Signal Generator</span>
+              <span class="chip">AC/DC Power Supply</span>
+              <span class="chip">Computer Vision</span>
+              <span class="chip">Control Systems</span>
+              <span class="chip">Prototyping</span>
+              <span class="chip">Mill</span>
+              <span class="chip">Lathe</span>
+              <span class="chip">3D Printer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:1.4rem;">
+          <h3>Relevant Coursework</h3>
+          <div class="skills">
+            <span class="chip">Control Systems</span>
+            <span class="chip">Embedded Systems</span>
+            <span class="chip">Mechatronics</span>
+            <span class="chip">Instrumentation</span>
+            <span class="chip">Signals and Systems</span>
+            <span class="chip">Mechanical Design</span>
           </div>
         </div>
       </div>
@@ -729,15 +762,12 @@
     <section id="contact">
       <div class="container">
         <h2 class="section-title">Contact</h2>
-        <p class="section-subtitle">
-          I welcome opportunities in embedded systems, controls, hardware design, and mechatronics engineering.
-        </p>
+        <p class="section-subtitle">        </p>
 
         <div class="contact-grid">
           <div class="card">
             <h3>Let's Connect</h3>
             <p>
-              I'm interested in opportunities involving embedded systems, hardware design, controls, and engineering development work.
             </p>
             <div class="contact-list">
               <div class="contact-item"><strong>Email:</strong> <a href="mailto:maesparza26@gmail.com">maesparza26@gmail.com</a></div>
