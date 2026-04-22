@@ -93,7 +93,7 @@
     }
 
     .hero {
-      padding: 5.5rem 0 4rem;
+      padding: 5.5rem 0 1rem;
     }
 
     .hero-grid {
@@ -191,7 +191,11 @@
     }
 
     section {
-      padding: 2rem 0 1rem;
+      padding: 1rem 0;
+    }
+
+    #projects {
+      padding-top: 0.5rem;
     }
 
     .section-title {
@@ -210,6 +214,11 @@
     .contact-grid {
       display: grid;
       grid-template-columns: 1.05fr 0.95fr;
+      gap: 1.4rem;
+    }
+
+    .resume-stack {
+      display: grid;
       gap: 1.4rem;
     }
 
@@ -237,6 +246,7 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 1.5rem;
+      margin-top: 1rem;
     }
 
     .project-card {
@@ -457,7 +467,6 @@
     <div class="container nav-inner">
       <a href="#home" class="brand">Marlenne Esparza</a>
       <div class="nav-links">
-        <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
@@ -468,36 +477,35 @@
   <header class="hero" id="home">
     <div class="container hero-grid">
       <div>
-        <div class="eyebrow">Mechatronics Engineering Portfolio</div>
-        <h1>Designing embedded, mechanical, and data-driven systems.</h1>
+        <h2 class="section-title">Engineering Portfolio</h2>
         <p>
-          I’m Marlenne Esparza, a graduating senior in Mechatronics Engineering with experience in embedded systems,
-          controls, CAD, prototyping, and hardware-focused design. I enjoy building practical systems that connect
-          sensing, software, and mechanical design to solve real-world problems.
+          My name is Marlenne Esparza, and I am a graduating senior pursuing a Bachelor of Science in Multidisciplinary Engineering Technology with a concentration in Mechatronics.
+          My degree has given me a strong foundation in electronic and mechanical systems, supported by a mathematics minor,
+          embedded systems, software, and design.
         </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">View Projects</a>
-          <a class="btn btn-secondary" href="#contact">Contact Me</a>
-        </div>
+        <p>
+          Through open-ended projects, hands-on labs, and team-based capstone work, I have developed experience designing, testing, and evaluating
+          hardware and software systems while strengthening my communication, project management, and practical engineering skills.
+        </p>
       </div>
 
       <div class="hero-card">
         <div class="stat-grid">
           <div class="stat">
             <strong>Embedded</strong>
-            <span class="muted">Microcontrollers, sensors, BLE, data acquisition</span>
+            <span class="muted">Microcontrollers, Sensors, Bluetooth Low Energy, Data Acquisition</span>
           </div>
           <div class="stat">
             <strong>Controls</strong>
-            <span class="muted">Modeling, system behavior, applied dynamics</span>
+            <span class="muted">Modeling, System Behavior, Applied Dynamics</span>
           </div>
           <div class="stat">
             <strong>CAD</strong>
-            <span class="muted">SolidWorks design, prototyping, manufacturable parts</span>
+            <span class="muted">SolidWorks Design, Prototyping, Manufacturable Parts</span>
           </div>
           <div class="stat">
             <strong>Software</strong>
-            <span class="muted">Arduino, C/C++, MATLAB, dashboards, visualization</span>
+            <span class="muted">Arduino, C/C++, MATLAB, Visualization</span>
           </div>
         </div>
       </div>
@@ -505,52 +513,9 @@
   </header>
 
   <main>
-    <section id="about">
-      <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-subtitle">
-          My work combines hardware, software, and system-level thinking. I am especially interested in embedded design,
-          controls, medical-adjacent devices, and engineering projects that require both technical depth and practical implementation.
-        </p>
-
-        <div class="about-grid">
-          <div class="card">
-            <h3>What I Focus On</h3>
-            <p>
-              I like projects where I can move from concept to prototype by defining requirements, selecting components,
-              integrating sensors, building mechanical parts, writing firmware, and presenting data in a useful way.
-            </p>
-            <div class="skills">
-              <span class="chip">Embedded Systems</span>
-              <span class="chip">Sensors & Instrumentation</span>
-              <span class="chip">CAD / SolidWorks</span>
-              <span class="chip">Controls</span>
-              <span class="chip">MATLAB / Simulink</span>
-              <span class="chip">Arduino / C++</span>
-              <span class="chip">Data Visualization</span>
-              <span class="chip">Rapid Prototyping</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>Engineering Snapshot</h3>
-            <ul class="resume-list">
-              <li>Designed and integrated sensor-based systems for monitoring and feedback.</li>
-              <li>Developed firmware for microcontrollers with real-time data display and wireless transmission.</li>
-              <li>Built and analyzed dynamic mechanical prototypes using modeling and experimental validation.</li>
-              <li>Created technical dashboards and interfaces to make hardware data easier to interpret.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="projects">
       <div class="container">
         <h2 class="section-title">Featured Projects</h2>
-        <p class="section-subtitle">
-          Selected projects in embedded systems, controls, mechanical design, and applied mechatronics.
-        </p>
 
         <div class="project-grid">
           <article class="card project-card">
@@ -667,7 +632,7 @@
             <h3>LED Reaction Game with UART Scoring</h3>
             <p>
               Programmed a microcontroller-based game where users respond to LED prompts with button inputs.
-              Reaction timing was converted into points and transmitted results over UART for mobile app interaction.
+              Reaction timing was converted into points and results were transmitted over UART for mobile app interaction.
               The project involved coordinating timing logic, user input handling, and serial communication to create a responsive embedded game with real-time scoring feedback.
             </p>
             <div class="skills">
@@ -685,10 +650,9 @@
       <div class="container">
         <h2 class="section-title">Resume Highlights</h2>
         <p class="section-subtitle">
-          A concise overview of my technical background, experience, and areas of interest.
         </p>
 
-        <div class="about-grid">
+        <div class="resume-stack">
           <div class="card">
             <h3>Background</h3>
             <ul class="resume-list">
@@ -714,7 +678,7 @@
               <span class="chip">Python</span>
               <span class="chip">React / Next.js</span>
               <span class="chip">ROS (RViz, MoveIt2)</span>
-              <span class="chip">UR Cobot Programming</span>
+              <span class="chip">Universal Robotics Cobot Programming</span>
               <span class="chip">MATLAB</span>
               <span class="chip">Simulink</span>
               <span class="chip">SolidWorks</span>
@@ -724,7 +688,7 @@
               <span class="chip">SPI</span>
               <span class="chip">I2C</span>
               <span class="chip">UART</span>
-              <span class="chip">PCB Design</span>
+              <span class="chip">Printed Circuit Board Design</span>
               <span class="chip">KiCad</span>
               <span class="chip">Multisim</span>
               <span class="chip">Quartus</span>
@@ -748,12 +712,15 @@
         <div class="card" style="margin-top:1.4rem;">
           <h3>Relevant Coursework</h3>
           <div class="skills">
+            <span class="chip">Mechatronics I: Mobile Robotic Systems</span>
+            <span class="chip">Mechatronics II: Industrial Robotic Systems</span>
+            <span class="chip">Electronic Instrumentation</span>
             <span class="chip">Control Systems</span>
-            <span class="chip">Embedded Systems</span>
-            <span class="chip">Mechatronics</span>
-            <span class="chip">Instrumentation</span>
-            <span class="chip">Signals and Systems</span>
-            <span class="chip">Mechanical Design</span>
+            <span class="chip">Analog/Digital Electroncs </span>
+            <span class="chip">Microcontroller Architecture</span>
+            <span class="chip">Strength of Materials</span>
+            <span class="chip">Applied Dynamic Systems</span>
+            <span class="chip">Mechanical Design Applications I</span> 
           </div>
         </div>
       </div>
@@ -762,7 +729,6 @@
     <section id="contact">
       <div class="container">
         <h2 class="section-title">Contact</h2>
-        <p class="section-subtitle">        </p>
 
         <div class="contact-grid">
           <div class="card">
