@@ -109,7 +109,7 @@
     }
 
     h1 {
-      font-size: clamp(2.4rem, 5vw, 4.7rem);
+      font-size: clamp(2rem, 4vw, 3.6rem);
       line-height: 1.05;
       margin: 0 0 1rem;
     }
@@ -266,6 +266,14 @@
       color: var(--muted);
     }
 
+    .project-image {
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.04);
+      object-fit: cover;
+    }
+
     .project-links {
       margin-top: auto;
       display: flex;
@@ -372,7 +380,7 @@
         <div class="eyebrow">Mechatronics Engineering Portfolio</div>
         <h1>Designing embedded, mechanical, and data-driven systems.</h1>
         <p>
-          I’m Marlenne Esparza, a Mechatronics Engineering student with experience in embedded systems,
+          I’m Marlenne Esparza, a graduating senior in Mechatronics Engineering with experience in embedded systems,
           controls, CAD, prototyping, and hardware-focused design. I enjoy building practical systems that connect
           sensing, software, and mechanical design to solve real-world problems.
         </p>
@@ -490,6 +498,7 @@
               <span class="chip">System Modeling</span>
               <span class="chip">Experimental Validation</span>
             </div>
+            <img class="project-image" src="PID-Ball-Balancing.png" alt="Ball balancing PID control system project image" />
             <div class="project-links">
               <a href="#">GitHub</a>
               <a href="https://youtu.be/KXk1OGpyCFk" target="_blank" rel="noreferrer">Video Demo</a>
@@ -514,6 +523,49 @@
             <div class="project-links">
               <a href="#">GitHub</a>
               <a href="#">Demo</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-top">
+              <span class="project-tag">Automation / Robotics</span>
+            </div>
+            <h3>Stack Sort Robot</h3>
+            <p>
+              Designed and assembled a robotic sorting system that combines mechanical structure, actuation, and embedded control to organize stacked components.
+              The project emphasizes integrated mechatronic design, subsystem coordination, and functional prototyping.
+            </p>
+            <div class="skills">
+              <span class="chip">Mechanical Design</span>
+              <span class="chip">Embedded Control</span>
+              <span class="chip">Actuation</span>
+              <span class="chip">Prototyping</span>
+            </div>
+            <img class="project-image" src="stack-sort-robot.png" alt="CAD rendering of the Stack Sort Robot project" />
+            <div class="project-links">
+              <a href="#">GitHub</a>
+              <a href="#">Project Details</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-top">
+              <span class="project-tag">Controls / Mechatronics</span>
+            </div>
+            <h3>Hanging Crane with Pendulum System</h3>
+            <p>
+              Developed a hanging crane system with pendulum dynamics to study motion behavior, load swing response, and control considerations in an underactuated mechanical system.
+              The project highlights dynamic modeling, system analysis, and practical implementation of mechatronic design concepts.
+            </p>
+            <div class="skills">
+              <span class="chip">Dynamic Modeling</span>
+              <span class="chip">Control Systems</span>
+              <span class="chip">Mechanical Design</span>
+              <span class="chip">System Analysis</span>
+            </div>
+            <div class="project-links">
+              <a href="#">GitHub</a>
+              <a href="#">Project Details</a>
             </div>
           </article>
         </div>
