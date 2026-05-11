@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marlenne Esparza | Portfolio</title>
-  <meta name="description" content="Portfolio website for Marlenne Esparza, a recently graduate in Mechatronics Engineering focused on embedded systems, controls, CAD, and hardware design." />
+  <meta name="description" content="Portfolio website for Marlenne Esparza, a Mechatronics Engineering graduate focused on embedded systems, controls, CAD, and hardware design." />
   <style>
     :root {
       --bg: #0b1020;
@@ -41,6 +41,12 @@
       text-align: justify;
     }
 
+    h1,
+    h2,
+    h3 {
+      letter-spacing: 0;
+    }
+
     a {
       color: inherit;
       text-decoration: none;
@@ -68,7 +74,7 @@
     .nav-inner {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       padding: 1rem 0;
       gap: 1rem;
     }
@@ -97,14 +103,13 @@
     }
 
     .hero {
-      padding: 5.5rem 0 1rem;
+      padding: 6rem 0 4rem;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.3fr 0.9fr;
-      gap: 2rem;
-      align-items: center;
+    .hero-center {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
     }
 
     .eyebrow {
@@ -117,16 +122,27 @@
     }
 
     h1 {
-      font-size: clamp(2rem, 4vw, 3.6rem);
+      font-size: clamp(2.8rem, 7vw, 5.6rem);
       line-height: 1.05;
       margin: 0 0 1rem;
+      background: linear-gradient(135deg, var(--text), var(--accent) 55%, var(--accent-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     .hero p {
       font-size: 1.08rem;
       color: var(--muted);
-      max-width: 62ch;
-      margin-bottom: 1.5rem;
+      max-width: 72ch;
+      margin: 0 auto 1.1rem;
+      text-align: center;
+    }
+
+    .hero .lead {
+      font-size: clamp(1.2rem, 2vw, 1.55rem);
+      color: var(--text);
+      margin-bottom: 0.85rem;
     }
 
     .hero-actions {
@@ -134,6 +150,7 @@
       gap: 1rem;
       flex-wrap: wrap;
       margin-top: 1.5rem;
+      justify-content: center;
     }
 
     .btn {
@@ -199,13 +216,36 @@
       margin-bottom: 0.2rem;
     }
 
+    main {
+      display: flex;
+      flex-direction: column;
+    }
+
     section {
-      padding: 1rem 0;
+      padding: 3rem 0;
+    }
+
+    #about {
+      order: 1;
+    }
+
+    #resume {
+      order: 2;
+    }
+
+    #skills {
+      order: 3;
     }
 
     #projects {
-      padding-top: 0.5rem;
+      order: 4;
+      padding-top: 3rem;
     }
+
+    #contact {
+      order: 5;
+    }
+
 
     .section-title {
       font-size: 1.9rem;
@@ -231,11 +271,42 @@
       text-align: left;
     }
 
+    .section-heading {
+      margin-bottom: 1.5rem;
+    }
+
+    .section-heading .section-title {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-heading .section-subtitle {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
     .about-grid,
     .contact-grid {
       display: grid;
       grid-template-columns: 1.05fr 0.95fr;
       gap: 1.4rem;
+    }
+
+    .contact-grid {
+      grid-template-columns: 1fr;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .about-copy {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      margin: 0;
     }
 
     .resume-stack {
@@ -245,6 +316,10 @@
 
     .card {
       padding: 1.5rem;
+    }
+
+    .card h3 {
+      margin-top: 0;
     }
 
     .skills {
@@ -261,6 +336,58 @@
       border-radius: 999px;
       color: var(--text);
       font-size: 0.92rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+    }
+
+    .skill-category {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      min-height: 100%;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .skill-category:hover {
+      border-color: var(--accent-border);
+      box-shadow: 0 14px 34px rgba(90,215,255,0.12);
+      transform: translateY(-2px);
+    }
+
+    .skill-category h3 {
+      margin-bottom: 0;
+      color: var(--text);
+    }
+
+    .skill-list {
+      display: grid;
+      gap: 0.75rem;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .skill-list li {
+      display: flex;
+      gap: 0.7rem;
+      align-items: flex-start;
+      color: var(--muted);
+    }
+
+    .skill-list li::before {
+      content: "";
+      width: 0.5rem;
+      height: 0.5rem;
+      margin-top: 0.55rem;
+      flex: 0 0 auto;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 16px rgba(90,215,255,0.28);
     }
 
     .project-grid {
@@ -470,11 +597,11 @@
     }
 
     @media (max-width: 900px) {
-      .hero-grid,
       .about-grid,
       .contact-grid,
       .project-grid,
-      .project-content {
+      .project-content,
+      .skills-grid {
         grid-template-columns: 1fr;
       }
 
@@ -503,57 +630,110 @@
 <body>
   <nav class="nav">
     <div class="container nav-inner">
-      <a href="#home" class="brand">Marlenne Esparza</a>
       <div class="nav-links">
-        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
         <a href="#resume">Resume</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
   </nav>
 
   <header class="hero" id="home">
-    <div class="container hero-grid">
-      <div>
-        <h2 class="section-title">Engineering Portfolio</h2>
-        <p>
-          My name is Marlenne Esparza, and I recently graduated with a Bachelor of Science in Multidisciplinary Engineering Technology with a concentration in Mechatronics.
-          My degree has given me a strong foundation in electronic and mechanical systems, supported by a mathematics minor,
-          embedded systems integration minor, software, and design.
-        </p>
-        <p>
-          Through open-ended projects, hands-on labs, and team-based capstone work, I have developed experience designing, testing, and evaluating
-          hardware and software systems while strengthening my communication, project management, and practical engineering skills.
-        </p>
-      </div>
-
-      <div class="hero-card">
-        <div class="stat-grid">
-          <div class="stat">
-            <strong>Embedded</strong>
-            <span class="muted">Microcontrollers, Sensors, Bluetooth Low Energy, Data Acquisition</span>
-          </div>
-          <div class="stat">
-            <strong>Controls</strong>
-            <span class="muted">Modeling, System Behavior, Applied Dynamics</span>
-          </div>
-          <div class="stat">
-            <strong>CAD</strong>
-            <span class="muted">SolidWorks Design, Prototyping, Manufacturable Parts</span>
-          </div>
-          <div class="stat">
-            <strong>Software</strong>
-            <span class="muted">Arduino, C/C++, MATLAB, Visualization</span>
-          </div>
-        </div>
+    <div class="container hero-center">
+      <h1>Marlenne Esparza</h1>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Get in Touch</a>
+        <a class="btn btn-secondary" href="#projects">View Projects</a>
       </div>
     </div>
   </header>
 
   <main>
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <h2 class="section-title">About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>
+              My name is Marlenne Esparza, and I recently graduated with a Bachelor of Science in Multidisciplinary Engineering Technology with a concentration in Mechatronics.
+              My degree gave me a strong foundation in electronic and mechanical systems, supported by a mathematics minor, embedded systems, software, and design.
+            </p>
+            <p>
+              Through open-ended projects, hands-on labs, and team-based capstone work, I have developed experience designing, testing, and evaluating hardware and software systems while strengthening my communication, project management, and practical engineering skills.
+            </p>
+          </div>
+
+          <div class="hero-card">
+            <div class="stat-grid">
+              <div class="stat">
+                <strong>Embedded</strong>
+                <span class="muted">Microcontrollers, Sensors, Bluetooth Low Energy, Data Acquisition</span>
+              </div>
+              <div class="stat">
+                <strong>Controls</strong>
+                <span class="muted">Modeling, System Behavior, Applied Dynamics</span>
+              </div>
+              <div class="stat">
+                <strong>CAD</strong>
+                <span class="muted">SolidWorks Design, Prototyping, Manufacturable Parts</span>
+              </div>
+              <div class="stat">
+                <strong>Software</strong>
+                <span class="muted">Arduino, C/C++, MATLAB, Visualization</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume">
+      <div class="container">
+        <div class="section-heading">
+          <h2 class="section-title">Resume Highlights</h2>
+        </div>
+
+        <div class="resume-stack">
+          <div class="card">
+            <h3>Background</h3>
+            <ul class="resume-list">
+              <li><strong>Education:</strong> B.S. in Multidisciplinary Engineering Technology - Mechatronics</li>
+              <li><strong>Interests:</strong> Embedded Systems, Automation & Controls, Medical Technology</li>
+              <li><strong>Experience:</strong> Firmware Development, Sensor Integration, CAD design, Testing and Validation</li>
+            </ul>
+            <div class="hero-actions" style="margin-top:1.2rem;">
+              <a class="btn btn-secondary" href="MEsparza_Resume.pdf" target="_blank" rel="noreferrer">Download Resume PDF</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:1.4rem;">
+          <h3>Relevant Coursework</h3>
+          <div class="skills">
+            <span class="chip">Mechatronics I: Mobile Robotic Systems</span>
+            <span class="chip">Mechatronics II: Industrial Robotic Systems</span>
+            <span class="chip">Electronic Instrumentation</span>
+            <span class="chip">Control Systems</span>
+            <span class="chip">Analog/Digital Electronics</span>
+            <span class="chip">Microcontroller Architecture</span>
+            <span class="chip">Strength of Materials</span>
+            <span class="chip">Applied Dynamic Systems</span>
+            <span class="chip">Mechanical Design Applications I</span> 
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="projects">
       <div class="container">
-        <h2 class="section-title">Featured Projects</h2>
+        <div class="section-heading">
+          <h2 class="section-title">Featured Projects</h2>
+        </div>
 
         <div class="project-grid">
           <article class="card project-card">
@@ -685,81 +865,79 @@
       </div>
     </section>
 
-    <section id="resume">
+    <section id="skills">
       <div class="container">
-        <h2 class="section-title">Resume Highlights</h2>
-        <p class="section-subtitle">
-        </p>
-
-        <div class="resume-stack">
-          <div class="card">
-            <h3>Background</h3>
-            <ul class="resume-list">
-              <li><strong>Education:</strong> B.S. in Multidisciplinary Engineering Technology - Mechatronics</li>
-              <li><strong>Interests:</strong> Embedded Systems, Automation & Controls, Medical Technology</li>
-              <li><strong>Experience:</strong> Firmware Development, Sensor Integration, CAD design, Testing and Validation</li>
-            </ul>
-            <div class="hero-actions" style="margin-top:1.2rem;">
-              <a class="btn btn-secondary" href="MEsparza_Resume.pdf" target="_blank" rel="noreferrer">Download Resume PDF</a>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>Technical Skills</h3>
-            <div class="skills">
-              <span class="chip">Arduino</span>
-              <span class="chip">Raspberry Pi</span>
-              <span class="chip">STM32</span>
-              <span class="chip">C / C++</span>
-              <span class="chip">Assembly</span>
-              <span class="chip">Kotlin</span>
-              <span class="chip">Linux</span>
-              <span class="chip">Python</span>
-              <span class="chip">React / Next.js</span>
-              <span class="chip">ROS (RViz, MoveIt2)</span>
-              <span class="chip">Universal Robotics Cobot Programming</span>
-              <span class="chip">MATLAB</span>
-              <span class="chip">Simulink</span>
-              <span class="chip">SolidWorks</span>
-              <span class="chip">Autodesk Fusion 360</span>
-              <span class="chip">Onshape</span>
-              <span class="chip">Embedded Firmware</span>
-              <span class="chip">SPI</span>
-              <span class="chip">I2C</span>
-              <span class="chip">UART</span>
-              <span class="chip">Printed Circuit Board Design</span>
-              <span class="chip">KiCad</span>
-              <span class="chip">Multisim</span>
-              <span class="chip">Quartus</span>
-              <span class="chip">Data Acquisition</span>
-              <span class="chip">LiDAR</span>
-              <span class="chip">Node-RED</span>
-              <span class="chip">Oscilloscope</span>
-              <span class="chip">Multimeter</span>
-              <span class="chip">Signal Generator</span>
-              <span class="chip">AC/DC Power Supply</span>
-              <span class="chip">Computer Vision</span>
-              <span class="chip">Control Systems</span>
-              <span class="chip">Prototyping</span>
-              <span class="chip">Mill</span>
-              <span class="chip">Lathe</span>
-              <span class="chip">3D Printer</span>
-            </div>
-          </div>
+        <div class="section-heading">
+          <h2 class="section-title">Skills &amp; Expertise</h2>
         </div>
 
-        <div class="card" style="margin-top:1.4rem;">
-          <h3>Relevant Coursework</h3>
-          <div class="skills">
-            <span class="chip">Mechatronics I: Mobile Robotic Systems</span>
-            <span class="chip">Mechatronics II: Industrial Robotic Systems</span>
-            <span class="chip">Electronic Instrumentation</span>
-            <span class="chip">Control Systems</span>
-            <span class="chip">Analog/Digital Electroncs </span>
-            <span class="chip">Microcontroller Architecture</span>
-            <span class="chip">Strength of Materials</span>
-            <span class="chip">Applied Dynamic Systems</span>
-            <span class="chip">Mechanical Design Applications I</span> 
+        <div class="skills-grid">
+          <div class="card skill-category">
+            <h3>Embedded Systems</h3>
+            <ul class="skill-list">
+              <li>Arduino</li>
+              <li>Raspberry Pi</li>
+              <li>STM32</li>
+              <li>Embedded Firmware</li>
+              <li>SPI, I2C, UART</li>
+            </ul>
+          </div>
+
+          <div class="card skill-category">
+            <h3>Programming &amp; Software</h3>
+            <ul class="skill-list">
+              <li>C / C++</li>
+              <li>Assembly</li>
+              <li>Python</li>
+              <li>Kotlin</li>
+              <li>React / Next.js</li>
+              <li>Linux</li>
+            </ul>
+          </div>
+
+          <div class="card skill-category">
+            <h3>Robotics &amp; Automation</h3>
+            <ul class="skill-list">
+              <li>ROS (RViz, MoveIt2)</li>
+              <li>Universal Robotics Cobot Programming</li>
+              <li>Computer Vision</li>
+              <li>LiDAR</li>
+              <li>Node-RED</li>
+            </ul>
+          </div>
+
+          <div class="card skill-category">
+            <h3>Controls &amp; Modeling</h3>
+            <ul class="skill-list">
+              <li>MATLAB</li>
+              <li>Simulink</li>
+              <li>Control Systems</li>
+              <li>Data Acquisition</li>
+              <li>System Analysis</li>
+            </ul>
+          </div>
+
+          <div class="card skill-category">
+            <h3>CAD &amp; Hardware Design</h3>
+            <ul class="skill-list">
+              <li>SolidWorks</li>
+              <li>Autodesk Fusion 360</li>
+              <li>Onshape</li>
+              <li>Printed Circuit Board Design</li>
+              <li>KiCad, Multisim, Quartus</li>
+            </ul>
+          </div>
+
+          <div class="card skill-category">
+            <h3>Testing &amp; Prototyping</h3>
+            <ul class="skill-list">
+              <li>Oscilloscope</li>
+              <li>Multimeter</li>
+              <li>Signal Generator</li>
+              <li>AC/DC Power Supply</li>
+              <li>Mill, Lathe, 3D Printer</li>
+              <li>Prototyping</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -767,13 +945,13 @@
 
     <section id="contact">
       <div class="container">
-        <h2 class="section-title">Contact</h2>
+        <div class="section-heading">
+          <h2 class="section-title">Contact</h2>
+        </div>
 
         <div class="contact-grid">
           <div class="card">
             <h3>Let's Connect</h3>
-            <p>
-            </p>
             <div class="contact-list">
               <div class="contact-item"><strong>Email:</strong> <a href="mailto:maesparza26@gmail.com">maesparza26@gmail.com</a></div>
               <div class="contact-item"><strong>GitHub:</strong> <a href="https://github.com/maesparza26" target="_blank" rel="noreferrer">github.com/maesparza26</a></div>
